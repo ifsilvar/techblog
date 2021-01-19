@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3004;
 
 const sess = {
   secret: 'Super secret secret',
@@ -26,6 +26,8 @@ app.use(session(sess));
 const hbs = exphbs.create({ helpers });
 
 app.engine('handlebars', hbs.engine);
+
+//set view engine to render html
 app.set('view engine', 'handlebars');
 
 app.use(express.json());

@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const { Blog } = require('../../models');
+const {Blog} = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
       const dbUserData = await Blog.create({
         title: req.body.title,
-        text: req.body.text,
+        description: req.body.description,
+        markdown: req.body.markdown,
       });
       res.status(200).json(dbUserData)
     } catch (err) {
@@ -19,7 +20,8 @@ router.put('/:id', async (req, res) => {
         const blog = await Blog.update(
         {
             title: req.body.title,
-            text: req.body.text,
+            description: req.body.description,
+            markdown: req.body.markdown,
         },
         {
             where: {
