@@ -36,7 +36,7 @@ router.get('/show/:id', async (req, res) => {
     };     
 });
 
-router.get("/myblog", withAuth, async (req, res) => {
+router.get("/myblogs", withAuth, async (req, res) => {
   const userData = await User.findByPk(req.session.user_id, { include: [Blog] })
   console.log(userData?.dataValues.blogs)
   res.render("myblog", {
@@ -45,8 +45,6 @@ router.get("/myblog", withAuth, async (req, res) => {
   });
   
 });
-
-
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
