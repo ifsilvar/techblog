@@ -7,6 +7,7 @@ router.post('/', async (req, res) => {
         title: req.body.title,
         description: req.body.description,
         markdown: req.body.markdown,
+        user_id: req.session.user_id,
       });
       res.status(200).json(dbUserData)
     } catch (err) {

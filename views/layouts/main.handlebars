@@ -9,8 +9,15 @@
 </head>
 
 <body>
+    {{#if loggedIn}}
+    <button id="logout" class="btn btn-success">Logout</button>
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a href="/login">Login</a>
+    {{/if}}
 
 {{{body}}}
 
+<script src="./js/logout.js"></script>
 </body>
 </html>

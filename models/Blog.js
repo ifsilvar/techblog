@@ -16,7 +16,7 @@ Blog.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     markdown: {
@@ -25,7 +25,7 @@ Blog.init(
     },
     createdAt: {
       type: DataTypes.DATE,
-      default: Date.now,
+      default: new Date().toLocaleDateString(),
     },
     user_id: {
       type: DataTypes.INTEGER,

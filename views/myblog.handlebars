@@ -2,19 +2,20 @@
     <h1 class="mb-4">Blog Articles</h1>
     <a href="/new" class="btn btn-success">New Article</a>
 
-
-    {{#each blogs as |blog|}}
+{{#if userData.length}}
+    {{#each userData as |blog|}}
       <div class="card mt-4">
         <div class="card-body">
-          <h4 class="card-title">{{blog.title}}</h4>
+          <h4 class="card-title">{{blog.dataValues.title}}</h4>
           <div class="card-subtitle text-muted mb-2">
-            {{format_time blog.createdAt}}
+            {{format_time blog.dataValues.createdAt}}
           </div>
-          <div class="card-text mb-2">{{blog.description}}</div>
-          <a href="/show/{{blog.id}}" class="btn btn-primary">Read More</a>
+          <div class="card-text mb-2">{{blog.dataValues.description}}</div>
+          <a href="/show/{{blog.dataValues.id}}" class="btn btn-primary">Read More</a>
         </div>
       </div>
     {{/each}}
+{{/if}}
   </div>
 
 <script src="./js/logout.js"></script>
