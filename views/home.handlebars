@@ -10,6 +10,7 @@
           <div class="card-subtitle text-muted mb-2">
             {{format_time blog.createdAt}}
           </div>
+          {{user.username}}
           <div class="card-text mb-2">{{blog.description}}</div>
           <a href="/show/{{blog.id}}" class="btn btn-primary">Read More</a>
         </div>
