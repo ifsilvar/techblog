@@ -38,10 +38,10 @@ router.get('/show/:id', async (req, res) => {
 
 router.get("/myblogs", withAuth, async (req, res) => {
   const userData = await User.findByPk(req.session.user_id, { include: [Blog] })
-  console.log(userData?.dataValues.blogs)
+  console.log(userData.dataValues.blogs)
   res.render("myblog", {
     loggedIn: req.session.loggedIn,
-    userData: userData?.dataValues.blogs || []
+    userData: userData.dataValues.blogs || []
   });
   
 });
