@@ -14,6 +14,8 @@
   ## Description:
     This is a simple webased techblog that allows for the creation of unique user accounts. Each user can create blog posts for display on the home page. Each user can also view all of their posts under the MyBlogs page which is only accessible if logged in.
 
+    ***Please note when creating a new user, user must log out and log back in in order for MyBlogs tab to work. Still working to resolve this bug.
+
 Below is an image of the homepage:
 ![Home Screen](./public/img/homescreen.png)
 
@@ -29,7 +31,7 @@ Below is an image of individual posts from logged in user:
   ## Contributors
     Ivan Flores Silvar
   ## Testing
-    n/a
+    use log in ivan@mail.com password: 123456 or login user2@mail.com password: 123456.
   ## Username
     ifsilvar
   ## Email
