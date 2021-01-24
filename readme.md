@@ -14,11 +14,12 @@
   ## Description:
     This is a simple webased techblog that allows for the creation of unique user accounts. Each user can create blog posts for display on the home page. Each user can also view all of their posts under the MyBlogs page which is only accessible if logged in.
 
-    Below is an image of the homepage:
-    ![Home Screen](./public/img/homescreen.png)
+Below is an image of the homepage:
+![Home Screen](./public/img/homescreen.png)
 
-    Below is an image of individual posts from logged in user:
-    ![My Blogs](./public/img/myblogs.png)
+Below is an image of individual posts from logged in user:
+![My Blogs](./public/img/myblogs.png)
+
   ## Installation:
     npm install bcrypt connect-session-sequelize dotenv express express-handlebars express-session express-session handlebars mysql2 sequelize
   ## Usage:
@@ -38,3 +39,4 @@
     - [GitHub](https://github.com/ifsilvar)
 
     For direct contact send me a message at: fl0resivan@yahoo.com.
+
